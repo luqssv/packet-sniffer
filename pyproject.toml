@@ -18,6 +18,9 @@ dependencies = [
 dev = [
   "pytest>=8.0.0",
 ]
+exe = [
+  "pyinstaller>=6.0.0",
+]
 
 [project.scripts]
 packet-sniffer = "packet_sniffer.cli:app"

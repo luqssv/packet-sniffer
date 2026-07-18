@@ -81,6 +81,37 @@ If you use `--pcap`, packets are also saved for Wireshark.
 pytest
 ```
 
+## Build Windows EXE
+
+Install the EXE build dependency:
+
+```powershell
+python -m pip install -e ".[exe]"
+```
+
+Build the executable:
+
+```powershell
+pyinstaller --onefile --name packet-sniffer --paths src --collect-all scapy src/packet_sniffer/cli.py
+```
+
+The file will be created at:
+
+```text
+dist/packet-sniffer.exe
+```
+
+## Publish EXE On GitHub
+
+Push a version tag:
+
+```powershell
+git tag v0.1.0
+git push origin v0.1.0
+```
+
+GitHub Actions will build the Windows `.exe` and attach it to a GitHub Release.
+
 ## Push To GitHub
 
 Create an empty GitHub repository, then run:
