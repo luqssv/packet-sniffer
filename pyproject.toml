@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "packet-sniffer"
+version = "0.1.0"
+description = "Defensive live packet sniffer with protocol filters, alerts, and structured logging."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+  "scapy>=2.5.0",
+  "typer>=0.12.0",
+  "rich>=13.7.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0.0",
+]
+
+[project.scripts]
+packet-sniffer = "packet_sniffer.cli:app"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
