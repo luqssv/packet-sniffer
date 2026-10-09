@@ -117,7 +117,7 @@ GitHub Actions will build the Windows `.exe` and attach it to a GitHub Release.
 Create an empty GitHub repository, then run:
 
 ```powershell
-git remote add origin https://github.com/YOUR_USERNAME/packet-sniffer.git
+git remote add origin https://github.com/luqssv/packet-sniffer.git
 git push -u origin main
 ```
 
