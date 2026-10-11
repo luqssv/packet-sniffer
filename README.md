@@ -100,29 +100,3 @@ The file will be created at:
 ```text
 dist/packet-sniffer.exe
 ```
-
-## Publish EXE On GitHub
-
-Push a version tag:
-
-```powershell
-git tag v0.1.0
-git push origin v0.1.0
-```
-
-GitHub Actions will build the Windows `.exe` and attach it to a GitHub Release.
-
-## Push To GitHub
-
-Create an empty GitHub repository, then run:
-
-```powershell
-git remote add origin https://github.com/luqssv/packet-sniffer.git
-git push -u origin main
-```
-
-Or with GitHub CLI:
-
-```powershell
-gh repo create packet-sniffer --private --source . --remote origin --push
-```
